@@ -7,7 +7,7 @@ function build
 
 function run
 {
-    docker run -it --network=host docker-bun-seed
+    docker run --env PORT=3000 -it --network=host docker-bun-seed
 }
 
 "$@"
