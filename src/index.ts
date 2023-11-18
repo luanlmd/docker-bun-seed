@@ -3,6 +3,9 @@ const PORT = Bun.env.PORT;
 const server = Bun.serve({
   port: PORT,
   fetch(request) {
-    return new Response("Welcome to Bun!");
+    const data = { success: true, message: "Welcome to Bun!" }
+    return Response.json(data);
   }
-});
+})
+
+console.log('Server Started');
